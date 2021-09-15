@@ -633,10 +633,8 @@ def set_performance():
     ):
         print("\nHigh CPU load")
 
-        # high cpu usage trigger
-        if cpuload >= 20:
-            print("setting turbo boost: on")
-            turbo(True)
+        print("setting turbo boost: on")
+        turbo(True)
 
         # set turbo state based on average of all core temperatures
         elif cpuload <= 25 and avg_all_core_temp >= 70:
@@ -647,19 +645,14 @@ def set_performance():
                 avg_all_core_temp,
                 "°C",
             )
-            print("setting turbo boost: off")
-            turbo(False)
-        else:
-            print("setting turbo boost: on")
-            turbo(True)
+        print("setting turbo boost: on")
+        turbo(True)
 
     elif load1m >= performance_load_threshold:
         print("\nHigh system load")
 
-        # high cpu usage trigger
-        if cpuload >= 20:
-            print("setting turbo boost: on")
-            turbo(True)
+        print("setting turbo boost: on")
+        turbo(True)
 
         # set turbo state based on average of all core temperatures
         elif cpuload <= 25 and avg_all_core_temp >= 65:
@@ -670,11 +663,8 @@ def set_performance():
                 avg_all_core_temp,
                 "°C",
             )
-            print("setting turbo boost: off")
-            turbo(False)
-        else:
-            print("setting turbo boost: on")
-            turbo(True)
+        print("setting turbo boost: on")
+        turbo(True)
 
     else:
         print("\nLoad optimal")
